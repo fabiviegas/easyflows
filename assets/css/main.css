@@ -338,6 +338,21 @@ nav {
   top: 429.27px;
   left: 310.69px;
 }
+.page__hero .hero-svg .dot {
+  position: absolute;
+}
+.page__hero .hero-svg .dot.dot-blue-small {
+  top: 200px;
+  left: 300px;
+}
+.page__hero .hero-svg .dot.dot-green-small {
+  top: 500px;
+  left: 800px;
+}
+.page__hero .hero-svg .dot.dot-yellow-small {
+  top: 600px;
+  left: 400px;
+}
 body {
   background-color: #000718;
   font-family: "Figtree", sans serif;
