@@ -1,0 +1,40 @@
+// out: false
+
+// * CAROUSEL UTILS
+
+
+ .owl-dots-circle(){
+    .owl-dots {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+        margin-top: 30px;
+
+        .owl-dot {
+            height: 8px !important;
+            display: flex;
+            align-items: center;
+
+            span {
+                margin: 0;
+                width: 10px;
+                height: 10px;
+                background-color: #a984e9;
+                border-radius: 100%;
+            }
+
+            &.active {
+                span {
+                    background-color: #5C3B94;
+                }
+            }
+        }
+
+        &.disabled {
+            display: none;
+        }
+    }
+}
+
+
