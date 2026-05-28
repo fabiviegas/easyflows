@@ -3,7 +3,6 @@ html {
 }
 body {
   overflow-x: hidden;
-  background-color: white;
 }
 body,
 p,
@@ -284,6 +283,60 @@ nav {
   .page__header .wrapper .is--desktop {
     display: none;
   }
+}
+.page__hero {
+  position: relative;
+  height: 794px;
+  width: 1192.534px;
+  margin: 0 auto;
+}
+.page__hero .hero-core {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.page__hero .hero-core .hero-logo {
+  width: 147px;
+}
+.page__hero .hero-svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.page__hero .hero-svg .circle {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.page__hero .hero-svg .line {
+  position: absolute;
+}
+.page__hero .hero-svg .line.line-green-1 {
+  top: 136.15px;
+  left: 434.73px;
+}
+.page__hero .hero-svg .line.line-blue-2 {
+  top: 54.27px;
+  left: 573.69px;
+}
+.page__hero .hero-svg .line.line-purple-3 {
+  top: 326.27px;
+  left: 720.69px;
+}
+.page__hero .hero-svg .line.line-green-4 {
+  top: 433.15px;
+  left: 744.73px;
+}
+.page__hero .hero-svg .line.line-yellow-5 {
+  top: 429.27px;
+  left: 310.69px;
 }
 body {
   background-color: #000718;
