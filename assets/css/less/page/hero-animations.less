@@ -1,0 +1,592 @@
+// out: false
+
+.page__hero {
+
+    //* ENTRANCES + ROTATIONS
+
+    .hero-core {
+        opacity: 0;
+        animation:
+        coreEnter 1.2s ease forwards,
+        coreRotate 26s linear infinite;
+        animation-delay: 0.8s, 1.2s;
+    }
+
+    .circle-wrap {
+        /* =========================
+           ENTRANCES
+        ========================= */
+        &.circle-wrap-1 {
+            opacity: 0;
+            animation:
+            circleEnter 1s ease forwards;
+            animation-delay: .2s;
+        }
+
+        &.circle-wrap-2 {
+            opacity: 0;
+            animation:
+            circleEnter 1s ease forwards;
+            animation-delay: .6s;
+        }
+
+        &.circle-wrap-3 {
+            opacity: 0;
+            animation:
+            circleEnter 1s ease forwards;
+            animation-delay: 1s;
+        }
+    }
+
+    /* =========================
+       ROTATIONS
+    ========================= */
+    .circle-1 {
+        animation: rotateSlow 4s linear infinite;
+    }
+
+    .circle-2 {
+        animation: rotateReverse 10s linear infinite;
+    }
+
+    .circle-3 {
+        animation: rotateSlow 20s linear infinite;
+    }
+
+
+/* =========================
+FLOW 1
+========================= */
+
+/* DOT CENTRAL */
+.dot-green-2 {
+    opacity: 0;
+    animation: dotEnter .3s ease forwards;
+    animation-delay: 2.2s;
+}
+
+/* LINE */
+.line-green-1 {
+    opacity: 0;
+    clip-path: inset(100% 0 0 0);
+    animation: lineEnter .8s ease forwards;
+    animation-delay: 2.4s;
+}
+
+/* DOT FINAL */
+.dot-green-1 {
+    opacity: 0;
+    animation: dotEnter .2s ease forwards;
+    animation-delay: 3s;
+}
+
+/* CARD */
+    .card-1 {
+        opacity: 0;
+        animation: cardEnter .6s ease forwards;
+        animation-delay: 3.2s;
+    }
+
+/* =========================
+FLOW 2
+========================= */
+
+/* CARD */
+
+    .card-2 {
+        opacity: 0;
+        overflow: hidden;
+        animation:
+        pillEnter .4s ease forwards,
+        pillExpand .6s ease forwards;
+        animation-delay:
+        3.8s,
+        4.2s;
+
+        .card-content {
+            opacity: 0;
+            width: 0;
+            overflow: hidden;
+            white-space: nowrap;
+            animation:
+            textReveal .4s ease forwards;
+            animation-delay: 4.5s;
+        }
+    }
+
+    /* =========================
+    FLOW 3
+    ========================= */
+
+    /* DOT CENTRAL */
+    .dot-blue-1 {
+        opacity: 0;
+        animation: dotEnter .2s ease forwards;
+        animation-delay: 5.8s;       
+    }
+
+    /* LINE */
+    .line-blue-2 {
+        opacity: 0;
+        clip-path: inset(100% 0 0 0);
+        animation: lineEnter .8s ease forwards;
+        animation-delay: 5.5s;
+    }
+
+    /* DOT FINAL */
+    .dot-blue-2 {
+         opacity: 0;
+         animation: dotEnter .3s ease forwards;
+         animation-delay: 5.3s;
+    }
+
+    /* CARD */
+    .card-3 {
+        opacity: 0;
+        animation: cardEnter .6s ease forwards;
+        animation-delay: 6s;
+    } 
+    
+    /* =========================
+    FLOW 4
+    ========================= */
+
+    /* CARD */
+    .card-4 {
+        opacity: 0;
+        overflow: hidden;
+        animation:
+        pillEnter .4s ease forwards,
+        pillExpand2 .6s ease forwards;
+        animation-delay:
+        6.5s,
+        7s;
+
+        .card-content {
+            opacity: 0;
+            width: 0;
+            overflow: hidden;
+            white-space: nowrap;
+            animation:
+            textReveal2 .4s ease forwards;
+            animation-delay: 7.1s;
+        }
+    }
+
+    /* =========================
+    FLOW 5
+    ========================= */
+
+    /* DOT CENTRAL */
+    .dot-purple-1 {
+        opacity: 0;
+        animation: dotEnter .2s ease forwards;
+        animation-delay: 7.5s;       
+    }
+
+    /* LINE */
+    .line-purple-3 {
+        opacity: 0;
+        clip-path: inset(100% 0 0 0);
+        animation: lineEnter .8s ease forwards;
+        animation-delay: 7.6s;
+    }
+
+    /* DOT FINAL */
+    .dot-purple-2 {
+         opacity: 0;
+         animation: dotEnter .3s ease forwards;
+         animation-delay: 7.8s;
+    }
+
+    /* CARD */
+    .card-5 {
+        opacity: 0;
+        animation: cardEnter .6s ease forwards;
+        animation-delay: 7.9s;
+    } 
+
+     /* =========================
+    FLOW 6
+    ========================= */
+
+    /* DOT CENTRAL */
+    .dot-yellow-1 {
+        opacity: 0;
+        animation: dotEnter .2s ease forwards;
+        animation-delay: 8.2s;       
+    }
+
+    /* LINE */
+    .line-yellow-5 {
+        opacity: 0;
+        transform: scaleX(0);
+        transform-origin: left bottom;        
+        animation: lineYellowEnter .8s ease forwards;
+        animation-delay: 8.3s;
+    }
+
+    /* DOT FINAL */
+    .dot-yellow-2 {
+         opacity: 0;
+         animation: dotEnter .3s ease forwards;
+         animation-delay: 8.5s;
+    }
+
+    /* CARD */
+    .card-6 {
+        opacity: 0;
+        animation: cardEnter .6s ease forwards;
+        animation-delay: 8.3s;
+    } 
+
+     /* =========================
+    FLOW 7
+    ========================= */
+
+    /* CARD */
+    .card-7 {
+        opacity: 0;
+        overflow: hidden;
+        animation:
+        pillEnter .4s ease forwards,
+        pillExpand2 .6s ease forwards;
+        animation-delay:
+        8.8s,
+        9.5s;
+
+        .card-content {
+            opacity: 0;
+            width: 0;
+            overflow: hidden;
+            white-space: nowrap;
+            animation:
+            textReveal2 .4s ease forwards;
+            animation-delay: 9.8s;
+        }
+    }
+
+    /* =========================
+    FLOW 8
+    ========================= */
+
+    /* DOT CENTRAL */
+    .dot-green-3 {
+        opacity: 0;
+        animation: dotEnter .3s ease forwards;
+        animation-delay: 10.6s;
+    }
+
+    /* LINE */
+    .line-green-4 {
+        opacity: 0;
+        transform: scaleX(0);
+        transform-origin: right bottom;
+        animation: lineGreenEnter .8s ease forwards;
+        animation-delay: 10.4s;
+    }
+
+    /* DOT FINAL */
+    .dot-green-4 {
+        opacity: 0;
+        animation: dotEnter .2s ease forwards;
+        animation-delay: 10.2s;
+    }
+
+    /* CARD */
+    .card-8 {
+        opacity: 0;
+        animation: cardEnter .6s ease forwards;
+        animation-delay: 10.8s;
+    }
+
+    /* =========================
+    ORBITAL DOTS
+    ========================= */
+
+    .dot-blue-small,
+    .dot-green-small,
+    .dot-yellow-small {
+
+        opacity: 0;
+
+        animation:
+        orbitalEnter .4s ease forwards,
+        orbitalPulse 2.4s ease-in-out infinite;
+
+        animation-delay:
+        10.2s,
+        10.6s;
+    }
+
+    .dot-blue-small {
+
+        animation-delay:
+        10.2s,
+        10.6s;
+    }
+
+    .dot-green-small {
+
+        animation-delay:
+        10.5s,
+        10.9s;
+    }
+
+    .dot-yellow-small {
+
+        animation-delay:
+        10.8s,
+        11.2s;
+    }
+}
+
+//* KEYFRAMES
+
+/* =========================
+   ENTRANCE
+========================= */
+
+@keyframes coreEnter {
+    from {
+        opacity: 0;
+        transform: scale(.4);
+        filter: blur(10px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+        filter: blur(0px);
+    }
+}
+
+@keyframes coreRotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes circleEnter {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -50%) scale(.6);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%) scale(1);
+    }
+}
+
+/* =========================
+   ROTATIONS
+========================= */
+@keyframes rotateSlow {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes rotateReverse {
+    from {
+        transform: rotate(360deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+/* =========================
+   DOT ENTER
+========================= */
+@keyframes dotEnter {
+    from {
+        opacity: 0;
+        transform: scale(.3);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* =========================
+   CARD ENTER
+========================= */
+@keyframes cardEnter {
+    from {
+        opacity: 0;
+        transform: translateY(10px) scale(.92);
+        filter: blur(6px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        filter: blur(0px);
+    }
+}
+
+/* =========================
+   LINE ENTER
+========================= */
+@keyframes lineEnter {
+    from {
+        opacity: 1;
+        clip-path: inset(100% 0 0 0);
+    }
+    to {
+        opacity: 1;
+        clip-path: inset(0 0 0 0);
+    }
+}
+
+@keyframes lineYellowEnter {
+
+    from {
+        opacity: 1;
+        transform: scaleX(0);
+    }
+    to {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
+
+@keyframes lineGreenEnter {
+
+    from {
+        opacity: 1;
+        transform: scaleX(0);
+    }
+    to {
+        opacity: 1;
+        transform: scaleX(1);
+    }
+}
+
+/* =========================
+   PILL ENTER
+========================= */
+@keyframes pillEnter {
+    from {
+        opacity: 0;
+        transform: scale(.7);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* =========================
+   PILL EXPAND
+========================= */
+@keyframes pillExpand {
+    from {
+        width: 60px;
+        gap: 0;
+    }
+    to {
+        width: 140px;
+        gap: 10px;
+    }
+}
+
+@keyframes pillExpand2 {
+    from {
+        width: 60px;
+        gap: 0;
+    }
+    to {
+        width: 180px;
+        gap: 10px;
+    }
+}
+
+
+/* =========================
+   TEXT REVEAL
+========================= */
+
+@keyframes textReveal {
+    from {
+        opacity: 0;
+        width: 0;
+        transform: translateX(-6px);
+    }
+    to {
+        opacity: 1;
+        width: 140px;
+        transform: translateX(0);
+    }
+}
+
+@keyframes textReveal2 {
+
+    from {
+        opacity: 0;
+        width: 0;
+        transform: translateX(-6px);
+    }
+
+    to {
+        opacity: 1;
+        width: 180px;
+        transform: translateX(0);
+    }
+}
+
+/* =========================
+   ORBITAL PULSE
+========================= */
+
+@keyframes orbitalPulse {
+
+    0% {
+
+        opacity: .4;
+
+        transform:
+        scale(.8);
+    }
+
+    50% {
+
+        opacity: 1;
+
+        transform:
+        scale(1.15);
+    }
+
+    100% {
+
+        opacity: .4;
+
+        transform:
+        scale(.8);
+    }
+}
+
+@keyframes orbitalEnter {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+        scale(.2);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+        scale(1);
+    }
+}

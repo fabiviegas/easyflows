@@ -614,23 +614,34 @@ nav {
   height: 100%;
   z-index: 3;
 }
-.page__hero .hero-svg .circle {
+.page__hero .hero-svg .circle-wrap {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.page__hero .hero-svg .circle-wrap .circle {
+  position: relative;
+  display: block;
+  transform-origin: center center;
   opacity: 1;
 }
-.page__hero .hero-svg .circle.circle-1 {
+.page__hero .hero-svg .circle-wrap .circle.circle-1 {
+  animation: rotateSlow 4s linear infinite;
   filter: drop-shadow(0 0 6px rgba(16, 25, 195, 0.45)) drop-shadow(0 0 20px rgba(16, 25, 195, 0.18));
 }
-.page__hero .hero-svg .circle.circle-2 {
+.page__hero .hero-svg .circle-wrap .circle.circle-2 {
+  animation: rotateReverse 10s linear infinite;
+  opacity: 0.85;
   filter: drop-shadow(0 0 8px rgba(0, 229, 255, 0.35)) drop-shadow(0 0 22px rgba(0, 229, 255, 0.12));
-  opacity: 0.85;
 }
-.page__hero .hero-svg .circle.circle-3 {
-  filter: drop-shadow(0 0 5px rgba(16, 25, 195, 0.35)) drop-shadow(0 0 16px rgba(16, 25, 195, 0.12));
+.page__hero .hero-svg .circle-wrap .circle.circle-3 {
+  animation: rotateSlow 20s linear infinite;
   opacity: 0.85;
+  filter: drop-shadow(0 0 5px rgba(16, 25, 195, 0.35)) drop-shadow(0 0 16px rgba(16, 25, 195, 0.12));
 }
 .page__hero .hero-svg .line {
   position: absolute;
@@ -791,32 +802,30 @@ nav {
 .page__hero .flow-card.card-2 {
   top: 248px;
   left: 225px;
-  gap: 10px;
+  display: flex;
   align-items: center;
-  width: fit-content;
+  gap: 10px;
+  max-width: 140px;
+  overflow: visible;
   padding: 12px 16px;
-  height: auto;
   border-radius: 20px;
   border: 1px solid rgba(0, 255, 166, 0.28);
   background: linear-gradient(94deg, rgba(4, 223, 146, 0.08) 2.06%, rgba(4, 223, 64, 0.01) 97.75%);
 }
 .page__hero .flow-card.card-2 .card-icon {
-  width: 27.535px;
+  min-width: 27.535px;
   height: 27.535px;
+  flex-shrink: 0;
+}
+.page__hero .flow-card.card-2 .card-content {
+  white-space: nowrap;
 }
 .page__hero .flow-card.card-2 .card-content h3 {
-  display: none;
-  transition: all 0.3s ease;
   color: #04DF40;
   font-family: Saira;
   font-size: 15px;
-  font-style: normal;
   font-weight: 400;
   line-height: 122.111%;
-  /* 18.317px */
-}
-.page__hero .flow-card.card-2 .card-content h3.active {
-  display: block;
 }
 .page__hero .flow-card.card-3 {
   top: 21px;
@@ -840,9 +849,11 @@ nav {
 .page__hero .flow-card.card-4 {
   top: 180px;
   left: 748px;
-  gap: 10px;
+  display: flex;
   align-items: center;
-  width: fit-content;
+  gap: 10px;
+  max-width: 180px;
+  overflow: visible;
   padding: 12px 16px;
   height: auto;
   border-radius: 20px;
@@ -852,10 +863,9 @@ nav {
 .page__hero .flow-card.card-4 .card-icon {
   width: 27.535px;
   height: 27.535px;
+  flex-shrink: 0;
 }
 .page__hero .flow-card.card-4 .card-content h3 {
-  display: none;
-  transition: all 0.3s ease;
   color: #BA86FF;
   font-family: Saira;
   font-size: 15px;
@@ -863,9 +873,6 @@ nav {
   font-weight: 400;
   line-height: 122.111%;
   /* 18.317px */
-}
-.page__hero .flow-card.card-4 .card-content h3.active {
-  display: block;
 }
 .page__hero .flow-card.card-5 {
   top: 276px;
@@ -904,6 +911,513 @@ nav {
 }
 .page__hero .flow-card.card-6 .info p {
   color: #FFCE00;
+}
+.page__hero .flow-card.card-7 {
+  top: 621px;
+  left: 501px;
+  gap: 10px;
+  align-items: center;
+  max-width: 160px;
+  padding: 12px 16px;
+  height: auto;
+  border-radius: 20px;
+  border: 1px solid rgba(59, 99, 255, 0.27);
+  background: rgba(16, 25, 195, 0.09);
+}
+.page__hero .flow-card.card-7 .card-icon {
+  width: 27.535px;
+  height: 27.535px;
+}
+.page__hero .flow-card.card-7 .card-content h3 {
+  display: none;
+  transition: all 0.3s ease;
+  color: #3BA0FF;
+  font-family: Saira;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 122.111%;
+  /* 18.317px */
+}
+.page__hero .flow-card.card-7 .card-content h3.active {
+  display: block;
+}
+.page__hero .flow-card.card-8 {
+  top: 487px;
+  left: 797px;
+  width: 200px;
+  height: auto;
+  border-radius: 30px;
+  border: 1px solid rgba(0, 255, 166, 0.28);
+  background: linear-gradient(94deg, rgba(4, 223, 146, 0.08) 2.06%, rgba(4, 223, 64, 0.01) 97.75%);
+}
+.page__hero .flow-card.card-8 .card-icon {
+  margin-top: 7px;
+}
+.page__hero .flow-card.card-8 .info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.page__hero .flow-card.card-8 .info p {
+  color: #55CF61;
+}
+.page__hero {
+  /* =========================
+       ROTATIONS
+    ========================= */
+  /* =========================
+FLOW 1
+========================= */
+  /* DOT CENTRAL */
+  /* LINE */
+  /* DOT FINAL */
+  /* CARD */
+  /* =========================
+FLOW 2
+========================= */
+  /* CARD */
+  /* =========================
+    FLOW 3
+    ========================= */
+  /* DOT CENTRAL */
+  /* LINE */
+  /* DOT FINAL */
+  /* CARD */
+  /* =========================
+    FLOW 4
+    ========================= */
+  /* CARD */
+  /* =========================
+    FLOW 5
+    ========================= */
+  /* DOT CENTRAL */
+  /* LINE */
+  /* DOT FINAL */
+  /* CARD */
+  /* =========================
+    FLOW 6
+    ========================= */
+  /* DOT CENTRAL */
+  /* LINE */
+  /* DOT FINAL */
+  /* CARD */
+  /* =========================
+    FLOW 7
+    ========================= */
+  /* CARD */
+  /* =========================
+    FLOW 8
+    ========================= */
+  /* DOT CENTRAL */
+  /* LINE */
+  /* DOT FINAL */
+  /* CARD */
+  /* =========================
+    ORBITAL DOTS
+    ========================= */
+}
+.page__hero .hero-core {
+  opacity: 0;
+  animation: coreEnter 1.2s ease forwards, coreRotate 26s linear infinite;
+  animation-delay: 0.8s, 1.2s;
+}
+.page__hero .circle-wrap {
+  /* =========================
+           ENTRANCES
+        ========================= */
+}
+.page__hero .circle-wrap.circle-wrap-1 {
+  opacity: 0;
+  animation: circleEnter 1s ease forwards;
+  animation-delay: 0.2s;
+}
+.page__hero .circle-wrap.circle-wrap-2 {
+  opacity: 0;
+  animation: circleEnter 1s ease forwards;
+  animation-delay: 0.6s;
+}
+.page__hero .circle-wrap.circle-wrap-3 {
+  opacity: 0;
+  animation: circleEnter 1s ease forwards;
+  animation-delay: 1s;
+}
+.page__hero .circle-1 {
+  animation: rotateSlow 4s linear infinite;
+}
+.page__hero .circle-2 {
+  animation: rotateReverse 10s linear infinite;
+}
+.page__hero .circle-3 {
+  animation: rotateSlow 20s linear infinite;
+}
+.page__hero .dot-green-2 {
+  opacity: 0;
+  animation: dotEnter 0.3s ease forwards;
+  animation-delay: 2.2s;
+}
+.page__hero .line-green-1 {
+  opacity: 0;
+  clip-path: inset(100% 0 0 0);
+  animation: lineEnter 0.8s ease forwards;
+  animation-delay: 2.4s;
+}
+.page__hero .dot-green-1 {
+  opacity: 0;
+  animation: dotEnter 0.2s ease forwards;
+  animation-delay: 3s;
+}
+.page__hero .card-1 {
+  opacity: 0;
+  animation: cardEnter 0.6s ease forwards;
+  animation-delay: 3.2s;
+}
+.page__hero .card-2 {
+  opacity: 0;
+  overflow: hidden;
+  animation: pillEnter 0.4s ease forwards, pillExpand 0.6s ease forwards;
+  animation-delay: 3.8s, 4.2s;
+}
+.page__hero .card-2 .card-content {
+  opacity: 0;
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: textReveal 0.4s ease forwards;
+  animation-delay: 4.5s;
+}
+.page__hero .dot-blue-1 {
+  opacity: 0;
+  animation: dotEnter 0.2s ease forwards;
+  animation-delay: 5.8s;
+}
+.page__hero .line-blue-2 {
+  opacity: 0;
+  clip-path: inset(100% 0 0 0);
+  animation: lineEnter 0.8s ease forwards;
+  animation-delay: 5.5s;
+}
+.page__hero .dot-blue-2 {
+  opacity: 0;
+  animation: dotEnter 0.3s ease forwards;
+  animation-delay: 5.3s;
+}
+.page__hero .card-3 {
+  opacity: 0;
+  animation: cardEnter 0.6s ease forwards;
+  animation-delay: 6s;
+}
+.page__hero .card-4 {
+  opacity: 0;
+  overflow: hidden;
+  animation: pillEnter 0.4s ease forwards, pillExpand2 0.6s ease forwards;
+  animation-delay: 6.5s, 7s;
+}
+.page__hero .card-4 .card-content {
+  opacity: 0;
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: textReveal2 0.4s ease forwards;
+  animation-delay: 7.1s;
+}
+.page__hero .dot-purple-1 {
+  opacity: 0;
+  animation: dotEnter 0.2s ease forwards;
+  animation-delay: 7.5s;
+}
+.page__hero .line-purple-3 {
+  opacity: 0;
+  clip-path: inset(100% 0 0 0);
+  animation: lineEnter 0.8s ease forwards;
+  animation-delay: 7.6s;
+}
+.page__hero .dot-purple-2 {
+  opacity: 0;
+  animation: dotEnter 0.3s ease forwards;
+  animation-delay: 7.8s;
+}
+.page__hero .card-5 {
+  opacity: 0;
+  animation: cardEnter 0.6s ease forwards;
+  animation-delay: 7.9s;
+}
+.page__hero .dot-yellow-1 {
+  opacity: 0;
+  animation: dotEnter 0.2s ease forwards;
+  animation-delay: 8.2s;
+}
+.page__hero .line-yellow-5 {
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: left bottom;
+  animation: lineYellowEnter 0.8s ease forwards;
+  animation-delay: 8.3s;
+}
+.page__hero .dot-yellow-2 {
+  opacity: 0;
+  animation: dotEnter 0.3s ease forwards;
+  animation-delay: 8.5s;
+}
+.page__hero .card-6 {
+  opacity: 0;
+  animation: cardEnter 0.6s ease forwards;
+  animation-delay: 8.3s;
+}
+.page__hero .card-7 {
+  opacity: 0;
+  overflow: hidden;
+  animation: pillEnter 0.4s ease forwards, pillExpand2 0.6s ease forwards;
+  animation-delay: 8.8s, 9.5s;
+}
+.page__hero .card-7 .card-content {
+  opacity: 0;
+  width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: textReveal2 0.4s ease forwards;
+  animation-delay: 9.8s;
+}
+.page__hero .dot-green-3 {
+  opacity: 0;
+  animation: dotEnter 0.3s ease forwards;
+  animation-delay: 10.6s;
+}
+.page__hero .line-green-4 {
+  opacity: 0;
+  transform: scaleX(0);
+  transform-origin: right bottom;
+  animation: lineGreenEnter 0.8s ease forwards;
+  animation-delay: 10.4s;
+}
+.page__hero .dot-green-4 {
+  opacity: 0;
+  animation: dotEnter 0.2s ease forwards;
+  animation-delay: 10.2s;
+}
+.page__hero .card-8 {
+  opacity: 0;
+  animation: cardEnter 0.6s ease forwards;
+  animation-delay: 10.8s;
+}
+.page__hero .dot-blue-small,
+.page__hero .dot-green-small,
+.page__hero .dot-yellow-small {
+  opacity: 0;
+  animation: orbitalEnter 0.4s ease forwards, orbitalPulse 2.4s ease-in-out infinite;
+  animation-delay: 10.2s, 10.6s;
+}
+.page__hero .dot-blue-small {
+  animation-delay: 10.2s, 10.6s;
+}
+.page__hero .dot-green-small {
+  animation-delay: 10.5s, 10.9s;
+}
+.page__hero .dot-yellow-small {
+  animation-delay: 10.8s, 11.2s;
+}
+/* =========================
+   ENTRANCE
+========================= */
+@keyframes coreEnter {
+  from {
+    opacity: 0;
+    transform: scale(0.4);
+    filter: blur(10px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+    filter: blur(0px);
+  }
+}
+@keyframes coreRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes circleEnter {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.6);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+/* =========================
+   ROTATIONS
+========================= */
+@keyframes rotateSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotateReverse {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+/* =========================
+   DOT ENTER
+========================= */
+@keyframes dotEnter {
+  from {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+/* =========================
+   CARD ENTER
+========================= */
+@keyframes cardEnter {
+  from {
+    opacity: 0;
+    transform: translateY(10px) scale(0.92);
+    filter: blur(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0px);
+  }
+}
+/* =========================
+   LINE ENTER
+========================= */
+@keyframes lineEnter {
+  from {
+    opacity: 1;
+    clip-path: inset(100% 0 0 0);
+  }
+  to {
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+  }
+}
+@keyframes lineYellowEnter {
+  from {
+    opacity: 1;
+    transform: scaleX(0);
+  }
+  to {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+@keyframes lineGreenEnter {
+  from {
+    opacity: 1;
+    transform: scaleX(0);
+  }
+  to {
+    opacity: 1;
+    transform: scaleX(1);
+  }
+}
+/* =========================
+   PILL ENTER
+========================= */
+@keyframes pillEnter {
+  from {
+    opacity: 0;
+    transform: scale(0.7);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+/* =========================
+   PILL EXPAND
+========================= */
+@keyframes pillExpand {
+  from {
+    width: 60px;
+    gap: 0;
+  }
+  to {
+    width: 140px;
+    gap: 10px;
+  }
+}
+@keyframes pillExpand2 {
+  from {
+    width: 60px;
+    gap: 0;
+  }
+  to {
+    width: 180px;
+    gap: 10px;
+  }
+}
+/* =========================
+   TEXT REVEAL
+========================= */
+@keyframes textReveal {
+  from {
+    opacity: 0;
+    width: 0;
+    transform: translateX(-6px);
+  }
+  to {
+    opacity: 1;
+    width: 140px;
+    transform: translateX(0);
+  }
+}
+@keyframes textReveal2 {
+  from {
+    opacity: 0;
+    width: 0;
+    transform: translateX(-6px);
+  }
+  to {
+    opacity: 1;
+    width: 180px;
+    transform: translateX(0);
+  }
+}
+/* =========================
+   ORBITAL PULSE
+========================= */
+@keyframes orbitalPulse {
+  0% {
+    opacity: 0.4;
+    transform: scale(0.8);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+  }
+  100% {
+    opacity: 0.4;
+    transform: scale(0.8);
+  }
+}
+@keyframes orbitalEnter {
+  from {
+    opacity: 0;
+    transform: scale(0.2);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 body {
   background-color: #000718;
