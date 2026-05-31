@@ -1,171 +1,275 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 
-  <title>Easy Flows</title>
+    <title>Easy Flows</title>
 
-  <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="assets/css/main.css">
 
-</head>
+  </head>
 
-<body>
+  <body>
 
-  <section class="page__hero">
+    <header class="page__header" id="inicio">
+        <div class="wrapper">
 
-    <!-- BACKGROUND GLOWS -->
+            <div class="logo">
+                <a href="index.html" rel="noopener noreferrer">
+                    <img src="assets/img/logo-header.svg" alt="Logo Easy Flows">
+                </a>
+            </div>
 
-    <div class="glow glow-1"></div>
-    <div class="glow glow-2"></div>
-    <div class="glow glow-3"></div>
-    <div class="glow glow-4"></div>
-    <div class="glow glow-5"></div>
-    <div class="glow glow-6"></div>
+            <div class="is--desktop">
+                <nav class="links">                    
+                    <a href="#inicio">
+                        Início
+                    </a>                    
+                    <a href="#sobre">
+                        Sobre
+                    </a>                    
+                    <a href="#customers">
+                        Cases
+                    </a>
+                    <a href="#aplicacoes">
+                        Aplicações
+                    </a>
+                    <a href="#contato">
+                        Contato
+                    </a>                   
+                </nav>
 
-    <!-- CENTRAL CORE -->
+                <a href="https://www.easyflows.com.br/app/site/login" class="btn__header" target="_blank"
+                    rel="noopener noreferrer">
+                    <img src="assets/img/icon-user.svg" class="icon" alt="Login de Usuário">
+                    Login
+                </a>
 
-    <div class="hero-core">
-      <img class="hero-logo" src="assets/img/isotipo-motion.svg" alt="Easy Flows" >
-    </div>
+            </div>
 
-    <!-- SVG LAYER -->
+            <div class="is--mobile">
+                <menu class="navbar__hamburguer">
+                    <img src="assets/img/burger-bar.svg" alt="Menu">
+                </menu>
 
-    <div class="hero-svg">
+                <div id="navbar__overlay" class="navbar__overlay">
+                    <div class="overlay__content">
 
-      <!-- CIRCLES --> 
-     
-      <div class="circle-wrap circle-wrap-1">
-        <img class="circle circle-1" src="assets/img/circle-1.svg" alt="Elipse">
-      </div>
+                        <div class="overlay__header">
+                            <img src="assets/img/icon-close.svg" alt="Fechar" class="overlay__close"></img>
+                        </div>
 
-      <div class="circle-wrap circle-wrap-2">
-        <img class="circle circle-2" src="assets/img/circle-2.svg" alt="Elipse">
-      </div>
+                        <div class="overlay__menu">
 
-      <div class="circle-wrap circle-wrap-3">
-        <img class="circle circle-3" src="assets/img/circle-3.svg" alt="Elipse">
-      </div>
+                            <nav class="overlay__links">
+                               <a href="#inicio" class="mobile__anchor">
+                                    Início
+                                </a>                    
+                                <a href="#sobre" class="mobile__anchor">
+                                    Sobre
+                                </a>                    
+                                <a href="#customers" class="mobile__anchor">
+                                    Cases
+                                </a>
+                                <a href="#aplicacoes" class="mobile__anchor">
+                                    Aplicações
+                                </a>
+                                <a href="#contato" class="mobile__anchor">
+                                    Contato
+                                </a>                               
+                            </nav>
 
-      <!-- CONNECTION LINES -->
+                            <a href="https://www.easyflows.com.br/app/site/login" class="btn__header__mobile" target="_blank"
+                              rel="noopener noreferrer">
+                              <img src="assets/img/icon-user.svg" class="icon" alt="Login de Usuário">
+                              Login
+                           </a>
 
-      <img class="line line-green-1" src="assets/img/line-green-1.svg" alt="">
-      <img class="line line-blue-2" src="assets/img/line-blue-2.svg" alt="">
-      <img class="line line-purple-3" src="assets/img/line-purple-3.svg" alt="">
-      <img class="line line-green-4" src="assets/img/line-green-4.svg" alt="">
-      <img class="line line-yellow-5" src="assets/img/line-yellow-5.svg" alt="">
+                            <a href="http://wa.me/556236020608" class="btn__blue" target="_blank"
+                                rel="noopener noreferrer">
+                                <img src="assets/img/icon-whats-white.svg" class="icon" alt="Whatsapp">
+                                Falar com um Consultor
+                            </a>
 
-      <!-- DOTS -->
+                        </div>
+                    </div>
 
-      <img class="dot dot-green dot-green-1" src="assets/img/dot-green.svg" alt="">
-      <img class="dot dot-green dot-green-2" src="assets/img/dot-green.svg" alt="">
-      <img class="dot dot-green dot-green-3" src="assets/img/dot-green.svg" alt="">
-      <img class="dot dot-green dot-green-4" src="assets/img/dot-green.svg" alt="">
-      <img class="dot dot-blue dot-blue-1"  src="assets/img/dot-blue.svg"  alt="">
-      <img class="dot dot-blue dot-blue-2"  src="assets/img/dot-blue.svg"  alt="">
-      <img class="dot dot-purple dot-purple-1" src="assets/img/dot-purple.svg" alt="">
-      <img class="dot dot-purple dot-purple-2" src="assets/img/dot-purple.svg" alt="">
-      <img class="dot dot-yellow dot-yellow-1" src="assets/img/dot-yellow.svg" alt="">
-      <img class="dot dot-yellow dot-yellow-2" src="assets/img/dot-yellow.svg" alt="">
-      <img class="dot dot-yellow-small" src="assets/img/dot-yellow-small.svg" alt="">
-      <img class="dot dot-blue-small" src="assets/img/dot-blue-small.svg" alt="">
-       <img class="dot dot-green-small" src="assets/img/dot-green-small.svg" alt="">
-
-    </div>    
-
-    <!-- FLOW CARDS -->
-
-    <div class="flow-card card-1">
-      <div class="card-icon">
-        <img src="assets/img/icon-card-1.svg" alt="">
-      </div>
-      <div class="card-content">
-        <h3>Mensagem recebida</h3>
-        <div class="info">
-          <p>WhatsApp</p>
-          <span>Agora</span>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
+    </header>
 
-    <div class="flow-card card-2">
-      <div class="card-icon">
-        <img src="assets/img/icon-card-2.svg" alt="">
-      </div>
-      <div class="card-content">
-        <h3>Fluxo iniciado</h3class=>
-      </div>
-    </div>
+    <section class="page__hero">
 
-    <div class="flow-card card-3">
-      <div class="card-icon">
-        <img src="assets/img/icon-card-3.svg" alt="">
-      </div>
-      <div class="card-content">
-        <h3>Documento criado</h3>
-        <div class="info">
-          <p>Contrato.pdf</p>
-          <span>2 min atrás</span>
-        </div>        
-      </div>
-    </div>
+      <button class="skip-button">
+          <img src="assets/img/icon-skip.svg" alt="Pular Animação">
+          Pular animação
+       </button>
 
-    <div class="flow-card card-4">
-      <img src="assets/img/icon-card-4.svg" alt="">
-      <div class="card-content">
-        <h3>Processo concluído</h3>
-      </div>
-    </div>
+      <!-- hero-system -->
+      <div class="hero-system">       
 
-    <div class="flow-card card-5">
-      <div class="card-icon">
-        <img src="assets/img/icon-card-5.svg" alt="">
-      </div>
-      <div class="card-content">
-        <h3>Assinatura concluída</h3>
-        <div class="info">
-          <p>João Silva</p>
-          <span>5 min atrás</span>
+        <!-- BACKGROUND GLOWS -->
+        <div class="glow glow-1"></div>
+        <div class="glow glow-2"></div>
+        <div class="glow glow-3"></div>
+        <div class="glow glow-4"></div>
+        <div class="glow glow-5"></div>
+        <div class="glow glow-6"></div>
+
+        <!-- CENTRAL CORE -->
+        <div class="hero-core">
+          <img class="hero-logo" src="assets/img/isotipo-motion.svg" alt="Easy Flows" >
         </div>
-      </div>
-    </div>
 
-    <div class="flow-card card-6">
-      <div class="card-icon">
-        <img src="assets/img/icon-card-6.svg" alt="">
-      </div>
-      <div class="card-content">
-        <h3>Notificação enviada</h3>
-        <div class="info">
-          <p>Setor Financeiro</p>
-          <span>7 min atrás</span>
-        </div>      
-      </div>
-    </div>
+        <!-- SVG LAYER -->
+        <div class="hero-svg">
 
-    <div class="flow-card card-7">
-      <img src="assets/img/icon-card-7.svg" alt="">
-      <div class="card-content">
-        <h3 class="active">Automação ativa</h3>
-      </div>
-    </div>
-
-    <div class="flow-card card-8">
-      <div class="card-icon">
-        <img src="assets/img/icon-card-8.svg" alt="">
-      </div>
-      <div class="card-content">
-        <h3>Documento arquivado</h3>
-        <div class="info">
-          <p>Repositório</p>
-          <span>10 min atrás</span>
+        <!-- CIRCLES -->      
+        <div class="circle-wrap circle-wrap-1">
+          <img class="circle circle-1" src="assets/img/circle-1.svg" alt="Elipse">
         </div>
+        <div class="circle-wrap circle-wrap-2">
+          <img class="circle circle-2" src="assets/img/circle-2.svg" alt="Elipse">
+        </div>
+        <div class="circle-wrap circle-wrap-3">
+          <img class="circle circle-3" src="assets/img/circle-3.svg" alt="Elipse">
+        </div>
+
+          <!-- CONNECTION LINES -->
+          <img class="line line-green-1" src="assets/img/line-green-1.svg" alt="">
+          <img class="line line-blue-2" src="assets/img/line-blue-2.svg" alt="">
+          <img class="line line-purple-3" src="assets/img/line-purple-3.svg" alt="">
+          <img class="line line-green-4" src="assets/img/line-green-4.svg" alt="">
+          <img class="line line-yellow-5" src="assets/img/line-yellow-5.svg" alt="">
+          <!-- DOTS -->
+          <img class="dot dot-green dot-green-1" src="assets/img/dot-green.svg" alt="">
+          <img class="dot dot-green dot-green-2" src="assets/img/dot-green.svg" alt="">
+          <img class="dot dot-green dot-green-3" src="assets/img/dot-green.svg" alt="">
+          <img class="dot dot-green dot-green-4" src="assets/img/dot-green.svg" alt="">
+          <img class="dot dot-blue dot-blue-1"  src="assets/img/dot-blue.svg"  alt="">
+          <img class="dot dot-blue dot-blue-2"  src="assets/img/dot-blue.svg"  alt="">
+          <img class="dot dot-purple dot-purple-1" src="assets/img/dot-purple.svg" alt="">
+          <img class="dot dot-purple dot-purple-2" src="assets/img/dot-purple.svg" alt="">
+          <img class="dot dot-yellow dot-yellow-1" src="assets/img/dot-yellow.svg" alt="">
+          <img class="dot dot-yellow dot-yellow-2" src="assets/img/dot-yellow.svg" alt="">
+          <img class="dot dot-yellow-small" src="assets/img/dot-yellow-small.svg" alt="">
+          <img class="dot dot-blue-small" src="assets/img/dot-blue-small.svg" alt="">
+          <img class="dot dot-green-small" src="assets/img/dot-green-small.svg" alt="">
       </div>
-    </div>
 
-  </section>
+        <!-- FLOW CARDS -->
+        <div class="flow-card card-1">
+          <div class="card-icon">
+            <img src="assets/img/icon-card-1.svg" alt="">
+          </div>
+          <div class="card-content">
+            <h3>Mensagem recebida</h3>
+            <div class="info">
+              <p>WhatsApp</p>
+              <span>Agora</span>
+            </div>
+          </div>
+        </div>
 
-</body>
+        <div class="flow-card card-2">
+          <div class="card-icon">
+            <img src="assets/img/icon-card-2.svg" alt="">
+          </div>
+          <div class="card-content">
+            <h3>Fluxo iniciado</h3>
+          </div>
+        </div>
 
+        <div class="flow-card card-3">
+          <div class="card-icon">
+            <img src="assets/img/icon-card-3.svg" alt="">
+          </div>
+          <div class="card-content">
+            <h3>Documento criado</h3>
+            <div class="info">
+              <p>Contrato.pdf</p>
+              <span>2 min atrás</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="flow-card card-4">
+          <img src="assets/img/icon-card-4.svg" alt="">
+          <div class="card-content">
+            <h3>Processo concluído</h3>
+          </div>
+        </div>
+
+        <div class="flow-card card-5">
+          <div class="card-icon">
+            <img src="assets/img/icon-card-5.svg" alt="">
+          </div>
+          <div class="card-content">
+            <h3>Assinatura concluída</h3>
+            <div class="info">
+              <p>João Silva</p>
+              <span>5 min atrás</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="flow-card card-6">
+          <div class="card-icon">
+            <img src="assets/img/icon-card-6.svg" alt="">
+          </div>
+          <div class="card-content">
+            <h3>Notificação enviada</h3>
+            <div class="info">
+              <p>Setor Financeiro</p>
+              <span>7 min atrás</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="flow-card card-7">
+          <img src="assets/img/icon-card-7.svg" alt="">
+          <div class="card-content">
+            <h3 class="active">Automação ativa</h3>
+          </div>
+        </div>
+
+        <div class="flow-card card-8">
+          <div class="card-icon">
+            <img src="assets/img/icon-card-8.svg" alt="">
+          </div>
+          <div class="card-content">
+            <h3>Documento arquivado</h3>
+            <div class="info">
+              <p>Repositório</p>
+              <span>10 min atrás</span>
+            </div>
+          </div>
+        </div>
+
+      </div> 
+      <!-- hero-system -->
+
+      <div class="hero-content">
+        <h1 class="hero-title">
+          Automação inteligente<br>
+          <span>para comunicação empresarial</span>
+        </h1>
+        <p class="hero-description">
+          Unifique documentos, notificações, fluxos de trabalho e mensagens do WhatsApp em uma plataforma centralizada.
+        </p>
+        <a href="http://wa.me/556236020608" class="btn__blue" target="_blank" rel="noopener noreferrer">
+            <img src="assets/img/icon-whats-white.svg" class="icon" alt="Whatsapp">
+            Falar com um Consultor
+        </a>
+
+      </div>
+
+    </section>
+
+    <script src="assets/js/skip.js"></script>
+
+  </body>
 </html>

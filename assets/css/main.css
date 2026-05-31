@@ -314,56 +314,30 @@ menu,
 nav {
   display: block;
 }
-.btn__transparent {
+.btn__blue {
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid #2E353B;
-  border-radius: 10px;
-  gap: 16px;
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 100%;
-  letter-spacing: 0.5px;
-  color: #2E353B;
-  padding: 12px 32px 14px 32px;
-  transition: all 0.3s;
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-}
-.btn__transparent:after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  background-color: transparent;
-  z-index: -2;
-}
-.btn__transparent:before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 0%;
-  height: 100%;
-  background-image: linear-gradient(90deg, #5C3B94 0%, #A259FF 100%);
-  transition: all 0.3s;
-  border-radius: 10px;
-  z-index: -1;
-}
-.btn__transparent:hover {
+  border-radius: 30px;
+  background: #3B63FF;
+  gap: 8px;
   color: #FFF;
-  border-color: transparent;
+  font-family: "Source Sans 3";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 122.111%;
+  /* 19.538px */
+  padding: 10px 27px 9px 27px;
+  transition: all 0.3s;
+  width: fit-content;
 }
-.btn__transparent:hover .icon {
-  filter: brightness(0) saturate(100%) invert(100%) sepia(100%) saturate(0%) hue-rotate(108deg) brightness(104%) contrast(104%);
+.btn__blue .icon {
+  width: 20px;
 }
-.btn__transparent:hover:before {
-  width: 100%;
+.btn__blue:hover {
+  color: #FFF;
+  background: #017B22;
 }
 .float__whatsapp {
   position: fixed;
@@ -427,7 +401,7 @@ nav {
 .page__header {
   position: absolute;
   width: 100%;
-  display: none;
+  z-index: 6000;
 }
 .page__header .wrapper {
   max-width: 1225px;
@@ -440,7 +414,7 @@ nav {
   gap: 60px;
 }
 .page__header .wrapper .logo {
-  width: 200px;
+  width: 160px;
 }
 .page__header .wrapper .logo a {
   width: 100%;
@@ -457,16 +431,44 @@ nav {
 .page__header .wrapper .is--desktop .links {
   display: flex;
   gap: 42px;
+  opacity: 0;
+  transform: translateY(12px);
+  pointer-events: none;
 }
 .page__header .wrapper .is--desktop .links a {
+  color: #0FA9F5;
+  font-family: Saira;
   font-size: 16px;
-  font-weight: 500;
-  transition: all linear 0.15s;
-  color: #2E353B;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
 }
 .page__header .wrapper .is--desktop .links a:hover {
   cursor: pointer;
-  color: #A259FF;
+  color: #FFCE00;
+}
+.page__header .wrapper .is--desktop .btn__header {
+  opacity: 0;
+  transform: translateY(12px);
+  border-radius: 30px;
+  border: 1px solid rgba(255, 206, 0, 0.15);
+  background: linear-gradient(94deg, rgba(16, 25, 195, 0.09) 2.06%, rgba(4, 223, 64, 0.03) 97.75%);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 16px 8px 10px;
+  color: #FFCE00;
+  font-family: Saira;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 122.111%;
+  /* 19.538px */
+}
+.page__header .wrapper .is--desktop .btn__header:hover {
+  cursor: pointer;
+  filter: brightness(1.2);
+  color: #FFCE00;
 }
 .page__header .wrapper .is--mobile {
   display: none;
@@ -546,9 +548,50 @@ nav {
   width: 1192.534px;
   margin: 0 auto;
 }
-.page__hero .glow {
+.page__hero .skip-button {
+  z-index: 7000;
+  opacity: 1;
+  animation: skipFadeOut 0.6s ease forwards;
+  animation-delay: 33s;
   position: absolute;
+  top: 40px;
+  right: 40px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 14px 8px 9px;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 206, 0, 0.15);
+  background: linear-gradient(94deg, rgba(16, 25, 195, 0.09) 2.06%, rgba(4, 223, 64, 0.03) 97.75%);
+  backdrop-filter: blur(12px);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #FFCE00;
+  font-family: Saira;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 122.111%;
+  /* 19.538px */
+}
+.page__hero .skip-button img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+}
+.page__hero .skip-button:hover {
+  filter: brightness(1.2);
+  color: #FFCE00;
+}
+.page__hero .hero-system {
+  width: 100%;
+  height: 100%;
+  position: relative;
   z-index: 1;
+}
+.page__hero .hero-system .glow {
+  position: absolute;
+  z-index: 2;
   pointer-events: none;
   border-radius: 50%;
   filter: blur(42px);
@@ -556,57 +599,57 @@ nav {
   opacity: 0.6;
   background: radial-gradient(rgba(16, 25, 195, 0.36) 0%, rgba(16, 25, 195, 0) 100%);
 }
-.page__hero .glow.glow-1 {
+.page__hero .hero-system .glow.glow-1 {
   top: 47px;
   left: 240px;
   width: 435px;
   height: 230px;
 }
-.page__hero .glow.glow-2 {
+.page__hero .hero-system .glow.glow-2 {
   top: 0;
   left: 748px;
   width: 462px;
   height: 339px;
   transform: rotate(0.7deg);
 }
-.page__hero .glow.glow-3 {
+.page__hero .hero-system .glow.glow-3 {
   top: 207px;
   left: 550px;
   width: 346px;
   height: 239px;
 }
-.page__hero .glow.glow-4 {
+.page__hero .hero-system .glow.glow-4 {
   top: 360px;
   left: 124px;
   width: 503px;
   height: 293px;
   transform: rotate(0.7deg);
 }
-.page__hero .glow.glow-5 {
+.page__hero .hero-system .glow.glow-5 {
   top: 278px;
   left: 305px;
   width: 627px;
   height: 432px;
 }
-.page__hero .glow.glow-6 {
+.page__hero .hero-system .glow.glow-6 {
   top: 278px;
   left: 643px;
   width: 367px;
   height: 273px;
   transform: rotate(-80deg);
 }
-.page__hero .hero-core {
+.page__hero .hero-system .hero-core {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
 }
-.page__hero .hero-core .hero-logo {
+.page__hero .hero-system .hero-core .hero-logo {
   width: 147px;
 }
-.page__hero .hero-svg {
+.page__hero .hero-system .hero-svg {
   position: absolute;
   top: 0;
   left: 0;
@@ -614,7 +657,7 @@ nav {
   height: 100%;
   z-index: 3;
 }
-.page__hero .hero-svg .circle-wrap {
+.page__hero .hero-system .hero-svg .circle-wrap {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -623,138 +666,142 @@ nav {
   justify-content: center;
   align-items: center;
 }
-.page__hero .hero-svg .circle-wrap .circle {
+.page__hero .hero-system .hero-svg .circle-wrap .circle {
   position: relative;
   display: block;
   transform-origin: center center;
   opacity: 1;
 }
-.page__hero .hero-svg .circle-wrap .circle.circle-1 {
+.page__hero .hero-system .hero-svg .circle-wrap .circle.circle-1 {
   animation: rotateSlow 4s linear infinite;
   filter: drop-shadow(0 0 6px rgba(16, 25, 195, 0.45)) drop-shadow(0 0 20px rgba(16, 25, 195, 0.18));
 }
-.page__hero .hero-svg .circle-wrap .circle.circle-2 {
+.page__hero .hero-system .hero-svg .circle-wrap .circle.circle-2 {
   animation: rotateReverse 10s linear infinite;
   opacity: 0.85;
   filter: drop-shadow(0 0 8px rgba(0, 229, 255, 0.35)) drop-shadow(0 0 22px rgba(0, 229, 255, 0.12));
 }
-.page__hero .hero-svg .circle-wrap .circle.circle-3 {
+.page__hero .hero-system .hero-svg .circle-wrap .circle.circle-3 {
   animation: rotateSlow 20s linear infinite;
   opacity: 0.85;
   filter: drop-shadow(0 0 5px rgba(16, 25, 195, 0.35)) drop-shadow(0 0 16px rgba(16, 25, 195, 0.12));
 }
-.page__hero .hero-svg .line {
+.page__hero .hero-system .hero-svg .line {
   position: absolute;
   opacity: 0.9;
 }
-.page__hero .hero-svg .line.line-green-1 {
+.page__hero .hero-system .hero-svg .line.line-green-1 {
   top: 136.15px;
   left: 434.73px;
   filter: drop-shadow(0 0 4px rgba(4, 223, 64, 0.9)) drop-shadow(0 0 12px rgba(4, 223, 64, 0.45)) drop-shadow(0 0 24px rgba(4, 223, 64, 0.2));
 }
-.page__hero .hero-svg .line.line-blue-2 {
+.page__hero .hero-system .hero-svg .line.line-blue-2 {
   top: 54.27px;
   left: 573.69px;
   filter: drop-shadow(0 0 4px rgba(4, 66, 223, 0.9)) drop-shadow(0 0 12px rgba(4, 66, 223, 0.45)) drop-shadow(0 0 24px rgba(4, 66, 223, 0.2));
 }
-.page__hero .hero-svg .line.line-purple-3 {
+.page__hero .hero-system .hero-svg .line.line-purple-3 {
   top: 326.27px;
   left: 720.69px;
   filter: drop-shadow(0 0 4px rgba(171, 82, 255, 0.9)) drop-shadow(0 0 12px rgba(171, 82, 255, 0.45)) drop-shadow(0 0 24px rgba(171, 82, 255, 0.2));
 }
-.page__hero .hero-svg .line.line-green-4 {
+.page__hero .hero-system .hero-svg .line.line-green-4 {
   top: 433.15px;
   left: 744.73px;
   filter: drop-shadow(0 0 4px rgba(4, 223, 64, 0.9)) drop-shadow(0 0 12px rgba(4, 223, 64, 0.45)) drop-shadow(0 0 24px rgba(4, 223, 64, 0.2));
 }
-.page__hero .hero-svg .line.line-yellow-5 {
+.page__hero .hero-system .hero-svg .line.line-yellow-5 {
   top: 429.27px;
   left: 310.69px;
   filter: drop-shadow(0 0 4px rgba(255, 214, 10, 0.9)) drop-shadow(0 0 12px rgba(255, 214, 10, 0.45)) drop-shadow(0 0 24px rgba(255, 214, 10, 0.2));
 }
-.page__hero .hero-svg .dot {
+.page__hero .hero-system .hero-svg .dot {
   position: absolute;
 }
-.page__hero .hero-svg .dot.dot-green {
+.page__hero .hero-system .hero-svg .dot.dot-green {
   filter: drop-shadow(0 0 3.3px rgba(4, 223, 64, 0.83));
 }
-.page__hero .hero-svg .dot.dot-green.dot-green-1 {
+.page__hero .hero-system .hero-svg .dot.dot-green.dot-green-1 {
   top: 132.8px;
   left: 433.8px;
 }
-.page__hero .hero-svg .dot.dot-green.dot-green-2 {
+.page__hero .hero-system .hero-svg .dot.dot-green.dot-green-2 {
   top: 331.8px;
   left: 539.8px;
 }
-.page__hero .hero-svg .dot.dot-green.dot-green-3 {
+.page__hero .hero-system .hero-svg .dot.dot-green.dot-green-3 {
   top: 428.8px;
   left: 741.8px;
 }
-.page__hero .hero-svg .dot.dot-green.dot-green-4 {
+.page__hero .hero-system .hero-svg .dot.dot-green.dot-green-4 {
   top: 481.8px;
   left: 847.8px;
 }
-.page__hero .hero-svg .dot.dot-blue {
+.page__hero .hero-system .hero-svg .dot.dot-blue {
   filter: drop-shadow(0 0 3.3px rgba(0, 13, 255, 0.83));
 }
-.page__hero .hero-svg .dot.dot-blue.dot-blue-1 {
+.page__hero .hero-system .hero-svg .dot.dot-blue.dot-blue-1 {
   top: 50.8px;
   left: 655.8px;
 }
-.page__hero .hero-svg .dot.dot-blue.dot-blue-2 {
+.page__hero .hero-system .hero-svg .dot.dot-blue.dot-blue-2 {
   top: 285.8px;
   left: 570.8px;
 }
-.page__hero .hero-svg .dot.dot-purple {
+.page__hero .hero-system .hero-svg .dot.dot-purple {
   filter: drop-shadow(0 0 3.3px rgba(138, 56, 245, 0.83));
 }
-.page__hero .hero-svg .dot.dot-purple.dot-purple-1 {
+.page__hero .hero-system .hero-svg .dot.dot-purple.dot-purple-1 {
   top: 341.8px;
   left: 713.8px;
 }
-.page__hero .hero-svg .dot.dot-purple.dot-purple-2 {
+.page__hero .hero-system .hero-svg .dot.dot-purple.dot-purple-2 {
   top: 321.8px;
   left: 830.8px;
 }
-.page__hero .hero-svg .dot.dot-yellow {
+.page__hero .hero-system .hero-svg .dot.dot-yellow {
   filter: drop-shadow(0 0 3.3px rgba(255, 206, 0, 0.83));
 }
-.page__hero .hero-svg .dot.dot-yellow.dot-yellow-1 {
+.page__hero .hero-system .hero-svg .dot.dot-yellow.dot-yellow-1 {
   top: 471.8px;
   left: 306.8px;
 }
-.page__hero .hero-svg .dot.dot-yellow.dot-yellow-2 {
+.page__hero .hero-system .hero-svg .dot.dot-yellow.dot-yellow-2 {
   top: 425.8px;
   left: 411.8px;
 }
-.page__hero .hero-svg .dot.dot-blue-small {
+.page__hero .hero-system .hero-svg .dot.dot-blue-small {
   filter: drop-shadow(0 0 3.3px rgba(0, 13, 255, 0.83));
   top: 560px;
   left: 587px;
 }
-.page__hero .hero-svg .dot.dot-green-small {
+.page__hero .hero-system .hero-svg .dot.dot-green-small {
   filter: drop-shadow(0 0 3.3px rgba(4, 223, 64, 0.83));
   top: 488px;
   left: 681px;
 }
-.page__hero .hero-svg .dot.dot-yellow-small {
+.page__hero .hero-system .hero-svg .dot.dot-yellow-small {
   filter: drop-shadow(0 0 3.3px rgba(255, 206, 0, 0.83));
   top: 322px;
   left: 442px;
 }
-.page__hero .flow-card {
+.page__hero .hero-system .flow-card {
   display: flex;
   gap: 18px;
   position: absolute;
   border-radius: 30px;
   padding: 15px 18px 15px 22px;
+  z-index: 3;
+  -webkit-font-smoothing: antialiased;
+  backface-visibility: hidden;
+  transform: translateZ(0);
 }
-.page__hero .flow-card .card-content {
+.page__hero .hero-system .flow-card .card-content {
   display: flex;
   flex-direction: column;
   gap: 6px;
 }
-.page__hero .flow-card .card-content h3 {
+.page__hero .hero-system .flow-card .card-content h3 {
   color: #FFF;
   font-family: "Saira", sans-serif;
   font-size: 18px;
@@ -763,14 +810,14 @@ nav {
   line-height: 122.111%;
   /* 24.422px */
 }
-.page__hero .flow-card .card-content .info p {
+.page__hero .hero-system .flow-card .card-content .info p {
   font-family: Saira;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 122.111%;
 }
-.page__hero .flow-card .card-content .info span {
+.page__hero .hero-system .flow-card .card-content .info span {
   color: #B6C7EB;
   font-family: "Source Sans 3";
   font-size: 14px;
@@ -779,7 +826,7 @@ nav {
   line-height: 122.111%;
   /* 17.096px */
 }
-.page__hero .flow-card.card-1 {
+.page__hero .hero-system .flow-card.card-1 {
   top: 81px;
   left: 196px;
   width: 200px;
@@ -788,18 +835,18 @@ nav {
   border: 1px solid rgba(0, 255, 166, 0.28);
   background: linear-gradient(94deg, rgba(4, 223, 146, 0.08) 2.06%, rgba(4, 223, 64, 0.01) 97.75%);
 }
-.page__hero .flow-card.card-1 .card-icon {
+.page__hero .hero-system .flow-card.card-1 .card-icon {
   margin-top: 7px;
 }
-.page__hero .flow-card.card-1 .info {
+.page__hero .hero-system .flow-card.card-1 .info {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.page__hero .flow-card.card-1 .info p {
+.page__hero .hero-system .flow-card.card-1 .info p {
   color: #55CF61;
 }
-.page__hero .flow-card.card-2 {
+.page__hero .hero-system .flow-card.card-2 {
   top: 248px;
   left: 225px;
   display: flex;
@@ -812,22 +859,22 @@ nav {
   border: 1px solid rgba(0, 255, 166, 0.28);
   background: linear-gradient(94deg, rgba(4, 223, 146, 0.08) 2.06%, rgba(4, 223, 64, 0.01) 97.75%);
 }
-.page__hero .flow-card.card-2 .card-icon {
+.page__hero .hero-system .flow-card.card-2 .card-icon {
   min-width: 27.535px;
   height: 27.535px;
   flex-shrink: 0;
 }
-.page__hero .flow-card.card-2 .card-content {
+.page__hero .hero-system .flow-card.card-2 .card-content {
   white-space: nowrap;
 }
-.page__hero .flow-card.card-2 .card-content h3 {
+.page__hero .hero-system .flow-card.card-2 .card-content h3 {
   color: #04DF40;
   font-family: Saira;
   font-size: 15px;
   font-weight: 400;
   line-height: 122.111%;
 }
-.page__hero .flow-card.card-3 {
+.page__hero .hero-system .flow-card.card-3 {
   top: 21px;
   left: 661px;
   width: 200px;
@@ -835,18 +882,18 @@ nav {
   border: 1px solid rgba(59, 99, 255, 0.22);
   background: linear-gradient(94deg, rgba(16, 25, 195, 0.09) 2.06%, rgba(59, 99, 255, 0.02) 97.75%);
 }
-.page__hero .flow-card.card-3 .card-icon {
+.page__hero .hero-system .flow-card.card-3 .card-icon {
   margin-top: 7px;
 }
-.page__hero .flow-card.card-3 .info {
+.page__hero .hero-system .flow-card.card-3 .info {
   display: flex;
   flex-direction: column;
   gap: 6px;
 }
-.page__hero .flow-card.card-3 .info p {
+.page__hero .hero-system .flow-card.card-3 .info p {
   color: #3BA0FF;
 }
-.page__hero .flow-card.card-4 {
+.page__hero .hero-system .flow-card.card-4 {
   top: 180px;
   left: 748px;
   display: flex;
@@ -860,12 +907,12 @@ nav {
   border: 1px solid rgba(59, 99, 255, 0.27);
   background: rgba(16, 25, 195, 0.09);
 }
-.page__hero .flow-card.card-4 .card-icon {
+.page__hero .hero-system .flow-card.card-4 .card-icon {
   width: 27.535px;
   height: 27.535px;
   flex-shrink: 0;
 }
-.page__hero .flow-card.card-4 .card-content h3 {
+.page__hero .hero-system .flow-card.card-4 .card-content h3 {
   color: #BA86FF;
   font-family: Saira;
   font-size: 15px;
@@ -874,7 +921,7 @@ nav {
   line-height: 122.111%;
   /* 18.317px */
 }
-.page__hero .flow-card.card-5 {
+.page__hero .hero-system .flow-card.card-5 {
   top: 276px;
   left: 835px;
   width: 200px;
@@ -882,18 +929,18 @@ nav {
   border: 1px solid rgba(59, 99, 255, 0.22);
   background: linear-gradient(94deg, rgba(16, 25, 195, 0.09) 2.06%, rgba(59, 99, 255, 0.02) 97.75%);
 }
-.page__hero .flow-card.card-5 .card-icon {
+.page__hero .hero-system .flow-card.card-5 .card-icon {
   margin-top: 7px;
 }
-.page__hero .flow-card.card-5 .info {
+.page__hero .hero-system .flow-card.card-5 .info {
   display: flex;
   flex-direction: column;
   gap: 6px;
 }
-.page__hero .flow-card.card-5 .info p {
+.page__hero .hero-system .flow-card.card-5 .info p {
   color: #BA86FF;
 }
-.page__hero .flow-card.card-6 {
+.page__hero .hero-system .flow-card.card-6 {
   top: 476px;
   left: 155px;
   width: 200px;
@@ -901,18 +948,18 @@ nav {
   border: 1px solid rgba(59, 99, 255, 0.22);
   background: linear-gradient(94deg, rgba(16, 25, 195, 0.09) 2.06%, rgba(59, 99, 255, 0.02) 97.75%);
 }
-.page__hero .flow-card.card-6 .card-icon {
+.page__hero .hero-system .flow-card.card-6 .card-icon {
   margin-top: 7px;
 }
-.page__hero .flow-card.card-6 .info {
+.page__hero .hero-system .flow-card.card-6 .info {
   display: flex;
   flex-direction: column;
   gap: 6px;
 }
-.page__hero .flow-card.card-6 .info p {
+.page__hero .hero-system .flow-card.card-6 .info p {
   color: #FFCE00;
 }
-.page__hero .flow-card.card-7 {
+.page__hero .hero-system .flow-card.card-7 {
   top: 621px;
   left: 501px;
   gap: 10px;
@@ -924,11 +971,11 @@ nav {
   border: 1px solid rgba(59, 99, 255, 0.27);
   background: rgba(16, 25, 195, 0.09);
 }
-.page__hero .flow-card.card-7 .card-icon {
+.page__hero .hero-system .flow-card.card-7 .card-icon {
   width: 27.535px;
   height: 27.535px;
 }
-.page__hero .flow-card.card-7 .card-content h3 {
+.page__hero .hero-system .flow-card.card-7 .card-content h3 {
   display: none;
   transition: all 0.3s ease;
   color: #3BA0FF;
@@ -939,10 +986,10 @@ nav {
   line-height: 122.111%;
   /* 18.317px */
 }
-.page__hero .flow-card.card-7 .card-content h3.active {
+.page__hero .hero-system .flow-card.card-7 .card-content h3.active {
   display: block;
 }
-.page__hero .flow-card.card-8 {
+.page__hero .hero-system .flow-card.card-8 {
   top: 487px;
   left: 797px;
   width: 200px;
@@ -951,81 +998,90 @@ nav {
   border: 1px solid rgba(0, 255, 166, 0.28);
   background: linear-gradient(94deg, rgba(4, 223, 146, 0.08) 2.06%, rgba(4, 223, 64, 0.01) 97.75%);
 }
-.page__hero .flow-card.card-8 .card-icon {
+.page__hero .hero-system .flow-card.card-8 .card-icon {
   margin-top: 7px;
 }
-.page__hero .flow-card.card-8 .info {
+.page__hero .hero-system .flow-card.card-8 .info {
   display: flex;
   flex-direction: column;
   gap: 6px;
 }
-.page__hero .flow-card.card-8 .info p {
+.page__hero .hero-system .flow-card.card-8 .info p {
   color: #55CF61;
+}
+.page__hero .hero-content {
+  position: absolute;
+  max-width: 639px;
+  top: 245px;
+  padding-bottom: 246px;
+  left: 8%;
+  opacity: 0;
+  transform: translateY(12px);
+  pointer-events: none;
+  z-index: 5000;
+}
+.page__hero .hero-content .hero-title {
+  color: #04DF40;
+  font-family: Saira;
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 110%;
+  /* 46.2px */
+  margin-bottom: 16px;
+}
+.page__hero .hero-content .hero-title span {
+  color: #3BA0FF;
+}
+.page__hero .hero-content .hero-description {
+  color: #FFF;
+  font-family: "Source Sans 3";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 122.111%;
+  /* 24.422px */
+  margin-bottom: 36px;
 }
 .page__hero {
   /* =========================
-       ROTATIONS
+    CORE & CIRCLES
     ========================= */
   /* =========================
-FLOW 1
-========================= */
-  /* DOT CENTRAL */
-  /* LINE */
-  /* DOT FINAL */
-  /* CARD */
+    FLOW 1
+    ========================= */
   /* =========================
-FLOW 2
-========================= */
-  /* CARD */
+    FLOW 2
+    ========================= */
   /* =========================
     FLOW 3
     ========================= */
-  /* DOT CENTRAL */
-  /* LINE */
-  /* DOT FINAL */
-  /* CARD */
   /* =========================
     FLOW 4
     ========================= */
-  /* CARD */
   /* =========================
     FLOW 5
     ========================= */
-  /* DOT CENTRAL */
-  /* LINE */
-  /* DOT FINAL */
-  /* CARD */
   /* =========================
     FLOW 6
     ========================= */
-  /* DOT CENTRAL */
-  /* LINE */
-  /* DOT FINAL */
-  /* CARD */
   /* =========================
     FLOW 7
     ========================= */
-  /* CARD */
   /* =========================
     FLOW 8
     ========================= */
-  /* DOT CENTRAL */
-  /* LINE */
-  /* DOT FINAL */
-  /* CARD */
   /* =========================
     ORBITAL DOTS
+    ========================= */
+  /* =========================
+    THE END
     ========================= */
 }
 .page__hero .hero-core {
   opacity: 0;
-  animation: coreEnter 1.2s ease forwards, coreRotate 26s linear infinite;
-  animation-delay: 0.8s, 1.2s;
-}
-.page__hero .circle-wrap {
-  /* =========================
-           ENTRANCES
-        ========================= */
+  animation: coreEnter 1.4s ease forwards, coreRotate 26s linear infinite;
+  animation-delay: 0.8s, 1.6s;
 }
 .page__hero .circle-wrap.circle-wrap-1 {
   opacity: 0;
@@ -1053,171 +1109,225 @@ FLOW 2
 }
 .page__hero .dot-green-2 {
   opacity: 0;
-  animation: dotEnter 0.3s ease forwards;
-  animation-delay: 2.2s;
+  animation: dotEnter 0.3s ease forwards, dotExit 0.4s ease forwards;
+  animation-delay: 2.4s, 28s;
 }
 .page__hero .line-green-1 {
   opacity: 0;
   clip-path: inset(100% 0 0 0);
-  animation: lineEnter 0.8s ease forwards;
-  animation-delay: 2.4s;
+  animation: lineEnter 1.1s ease forwards, lineExit 0.6s ease forwards;
+  animation-delay: 2.8s, 28.1s;
 }
 .page__hero .dot-green-1 {
   opacity: 0;
-  animation: dotEnter 0.2s ease forwards;
-  animation-delay: 3s;
+  animation: dotEnter 0.3s ease forwards, dotExit 0.4s ease forwards;
+  animation-delay: 4s, 28.2s;
 }
 .page__hero .card-1 {
   opacity: 0;
-  animation: cardEnter 0.6s ease forwards;
-  animation-delay: 3.2s;
+  animation: cardEnter 0.8s ease forwards, cardExit 0.7s ease forwards;
+  animation-delay: 4.6s, 28.4s;
 }
 .page__hero .card-2 {
   opacity: 0;
   overflow: hidden;
-  animation: pillEnter 0.4s ease forwards, pillExpand 0.6s ease forwards;
-  animation-delay: 3.8s, 4.2s;
+  animation: pillEnter 0.5s ease forwards, pillExpand 0.8s ease forwards, cardExit 0.7s ease forwards;
+  animation-delay: 5.5s, 6.1s, 28.7s;
 }
 .page__hero .card-2 .card-content {
   opacity: 0;
   width: 0;
   overflow: hidden;
   white-space: nowrap;
-  animation: textReveal 0.4s ease forwards;
-  animation-delay: 4.5s;
+  animation: textReveal 0.5s ease forwards;
+  animation-delay: 6.9s;
 }
-.page__hero .dot-blue-1 {
+.page__hero .dot-blue-2 {
   opacity: 0;
-  animation: dotEnter 0.2s ease forwards;
-  animation-delay: 5.8s;
+  animation: dotEnter 0.3s ease forwards, dotExit 0.4s ease forwards;
+  animation-delay: 7.8s, 29s;
 }
 .page__hero .line-blue-2 {
   opacity: 0;
   clip-path: inset(100% 0 0 0);
-  animation: lineEnter 0.8s ease forwards;
-  animation-delay: 5.5s;
+  animation: lineEnter 1.1s ease forwards, lineExit 0.6s ease forwards;
+  animation-delay: 8.2s, 29.1s;
 }
-.page__hero .dot-blue-2 {
+.page__hero .dot-blue-1 {
   opacity: 0;
-  animation: dotEnter 0.3s ease forwards;
-  animation-delay: 5.3s;
+  animation: dotEnter 0.3s ease forwards, dotExit 0.4s ease forwards;
+  animation-delay: 9.4s, 29.2s;
 }
 .page__hero .card-3 {
   opacity: 0;
-  animation: cardEnter 0.6s ease forwards;
-  animation-delay: 6s;
+  animation: cardEnter 0.8s ease forwards, cardExit 0.7s ease forwards;
+  animation-delay: 10s, 29.4s;
 }
 .page__hero .card-4 {
   opacity: 0;
   overflow: hidden;
-  animation: pillEnter 0.4s ease forwards, pillExpand2 0.6s ease forwards;
-  animation-delay: 6.5s, 7s;
+  animation: pillEnter 0.5s ease forwards, pillExpand2 0.8s ease forwards, cardExit 0.7s ease forwards;
+  animation-delay: 11s, 11.6s, 29.7s;
 }
 .page__hero .card-4 .card-content {
   opacity: 0;
   width: 0;
   overflow: hidden;
   white-space: nowrap;
-  animation: textReveal2 0.4s ease forwards;
-  animation-delay: 7.1s;
+  animation: textReveal2 0.5s ease forwards;
+  animation-delay: 12.3s;
 }
 .page__hero .dot-purple-1 {
   opacity: 0;
-  animation: dotEnter 0.2s ease forwards;
-  animation-delay: 7.5s;
+  animation: dotEnter 0.3s ease forwards, dotExit 0.4s ease forwards;
+  animation-delay: 13.2s, 30s;
 }
 .page__hero .line-purple-3 {
   opacity: 0;
   clip-path: inset(100% 0 0 0);
-  animation: lineEnter 0.8s ease forwards;
-  animation-delay: 7.6s;
+  animation: lineEnter 1.1s ease forwards, lineExit 0.6s ease forwards;
+  animation-delay: 13.6s, 30.1s;
 }
 .page__hero .dot-purple-2 {
   opacity: 0;
-  animation: dotEnter 0.3s ease forwards;
-  animation-delay: 7.8s;
+  animation: dotEnter 0.3s ease forwards, dotExit 0.4s ease forwards;
+  animation-delay: 14.8s, 30.2s;
 }
 .page__hero .card-5 {
   opacity: 0;
-  animation: cardEnter 0.6s ease forwards;
-  animation-delay: 7.9s;
+  animation: cardEnter 0.8s ease forwards, cardExit 0.7s ease forwards;
+  animation-delay: 15.4s, 30.4s;
 }
 .page__hero .dot-yellow-1 {
   opacity: 0;
-  animation: dotEnter 0.2s ease forwards;
-  animation-delay: 8.2s;
+  animation: dotEnter 0.3s ease forwards, dotExit 0.4s ease forwards;
+  animation-delay: 16.6s, 30.7s;
 }
 .page__hero .line-yellow-5 {
   opacity: 0;
   transform: scaleX(0);
   transform-origin: left bottom;
-  animation: lineYellowEnter 0.8s ease forwards;
-  animation-delay: 8.3s;
+  animation: lineYellowEnter 1.2s ease forwards, lineExit 0.6s ease forwards;
+  animation-delay: 17s, 30.8s;
 }
 .page__hero .dot-yellow-2 {
   opacity: 0;
-  animation: dotEnter 0.3s ease forwards;
-  animation-delay: 8.5s;
+  animation: dotEnter 0.3s ease forwards, dotExit 0.4s ease forwards;
+  animation-delay: 18.3s, 30.9s;
 }
 .page__hero .card-6 {
   opacity: 0;
-  animation: cardEnter 0.6s ease forwards;
-  animation-delay: 8.3s;
+  animation: cardEnter 0.8s ease forwards, cardExit 0.7s ease forwards;
+  animation-delay: 18.9s, 31.1s;
 }
 .page__hero .card-7 {
   opacity: 0;
   overflow: hidden;
-  animation: pillEnter 0.4s ease forwards, pillExpand2 0.6s ease forwards;
-  animation-delay: 8.8s, 9.5s;
+  animation: pillEnter 0.5s ease forwards, pillExpand2 0.8s ease forwards, cardExit 0.7s ease forwards;
+  animation-delay: 20s, 20.6s, 31.4s;
 }
 .page__hero .card-7 .card-content {
   opacity: 0;
   width: 0;
   overflow: hidden;
   white-space: nowrap;
-  animation: textReveal2 0.4s ease forwards;
-  animation-delay: 9.8s;
+  animation: textReveal2 0.5s ease forwards;
+  animation-delay: 21.3s;
 }
-.page__hero .dot-green-3 {
+.page__hero .dot-green-4 {
   opacity: 0;
-  animation: dotEnter 0.3s ease forwards;
-  animation-delay: 10.6s;
+  animation: dotEnter 0.3s ease forwards, dotExit 0.4s ease forwards;
+  animation-delay: 22.5s, 31.7s;
 }
 .page__hero .line-green-4 {
   opacity: 0;
   transform: scaleX(0);
   transform-origin: right bottom;
-  animation: lineGreenEnter 0.8s ease forwards;
-  animation-delay: 10.4s;
+  animation: lineGreenEnter 1.2s ease forwards, lineExit 0.6s ease forwards;
+  animation-delay: 22.9s, 31.8s;
 }
-.page__hero .dot-green-4 {
+.page__hero .dot-green-3 {
   opacity: 0;
-  animation: dotEnter 0.2s ease forwards;
-  animation-delay: 10.2s;
+  animation: dotEnter 0.3s ease forwards, dotExit 0.4s ease forwards;
+  animation-delay: 24.2s, 31.9s;
 }
 .page__hero .card-8 {
   opacity: 0;
-  animation: cardEnter 0.6s ease forwards;
-  animation-delay: 10.8s;
+  animation: cardEnter 0.8s ease forwards, cardExit 0.7s ease forwards;
+  animation-delay: 24.8s, 32.1s;
 }
 .page__hero .dot-blue-small,
 .page__hero .dot-green-small,
 .page__hero .dot-yellow-small {
   opacity: 0;
   animation: orbitalEnter 0.4s ease forwards, orbitalPulse 2.4s ease-in-out infinite;
-  animation-delay: 10.2s, 10.6s;
 }
 .page__hero .dot-blue-small {
-  animation-delay: 10.2s, 10.6s;
+  animation-delay: 25.8s, 26.2s;
 }
 .page__hero .dot-green-small {
-  animation-delay: 10.5s, 10.9s;
+  animation-delay: 26.2s, 26.6s;
 }
 .page__hero .dot-yellow-small {
-  animation-delay: 10.8s, 11.2s;
+  animation-delay: 26.6s, 27s;
+}
+.page__hero .hero-system {
+  animation: heroDock 1.4s cubic-bezier(0.77, 0, 0.18, 1);
+  animation-delay: 33s;
+  animation-fill-mode: forwards;
+}
+.page__header .links,
+.page__header .is--desktop .btn__header,
+.page__hero .hero-content {
+  animation: uiReveal 0.8s ease forwards;
+  animation-delay: 34s;
+  animation-fill-mode: forwards;
+  pointer-events: auto !important;
+}
+body.skip-intro .page__header .links,
+body.skip-intro .page__header .is--desktop .btn__header {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+  animation: none !important;
+}
+body.skip-intro .skip-button {
+  animation: skipFadeOut 0.4s ease forwards !important;
+}
+body.skip-intro .hero-system {
+  transform: translateX(420px) translateY(-40px);
+}
+body.skip-intro .hero-core,
+body.skip-intro .circle-wrap,
+body.skip-intro .circle,
+body.skip-intro .dot-blue-small,
+body.skip-intro .dot-green-small,
+body.skip-intro .dot-yellow-small {
+  opacity: 1 !important;
+}
+body.skip-intro .flow-card,
+body.skip-intro .line,
+body.skip-intro .dot-green-1,
+body.skip-intro .dot-green-2,
+body.skip-intro .dot-green-3,
+body.skip-intro .dot-green-4,
+body.skip-intro .dot-blue-1,
+body.skip-intro .dot-blue-2,
+body.skip-intro .dot-purple-1,
+body.skip-intro .dot-purple-2,
+body.skip-intro .dot-yellow-1,
+body.skip-intro .dot-yellow-2 {
+  animation: none !important;
+  opacity: 0 !important;
+}
+body.skip-intro .hero-content {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
 }
 /* =========================
-   ENTRANCE
+KEYFRAMES
+========================= */
+/* =========================
+ENTRANCES
 ========================= */
 @keyframes coreEnter {
   from {
@@ -1250,7 +1360,7 @@ FLOW 2
   }
 }
 /* =========================
-   ROTATIONS
+ROTATIONS
 ========================= */
 @keyframes rotateSlow {
   from {
@@ -1269,7 +1379,7 @@ FLOW 2
   }
 }
 /* =========================
-   DOT ENTER
+DOT ENTER
 ========================= */
 @keyframes dotEnter {
   from {
@@ -1282,22 +1392,20 @@ FLOW 2
   }
 }
 /* =========================
-   CARD ENTER
+CARD ENTER
 ========================= */
 @keyframes cardEnter {
   from {
     opacity: 0;
     transform: translateY(10px) scale(0.92);
-    filter: blur(6px);
   }
   to {
     opacity: 1;
     transform: translateY(0) scale(1);
-    filter: blur(0px);
   }
 }
 /* =========================
-   LINE ENTER
+LINE ENTER
 ========================= */
 @keyframes lineEnter {
   from {
@@ -1330,7 +1438,7 @@ FLOW 2
   }
 }
 /* =========================
-   PILL ENTER
+PILL ENTER
 ========================= */
 @keyframes pillEnter {
   from {
@@ -1343,7 +1451,7 @@ FLOW 2
   }
 }
 /* =========================
-   PILL EXPAND
+PILL EXPAND
 ========================= */
 @keyframes pillExpand {
   from {
@@ -1366,7 +1474,7 @@ FLOW 2
   }
 }
 /* =========================
-   TEXT REVEAL
+TEXT REVEAL
 ========================= */
 @keyframes textReveal {
   from {
@@ -1393,7 +1501,7 @@ FLOW 2
   }
 }
 /* =========================
-   ORBITAL PULSE
+ORBITAL PULSE
 ========================= */
 @keyframes orbitalPulse {
   0% {
@@ -1417,6 +1525,85 @@ FLOW 2
   to {
     opacity: 1;
     transform: scale(1);
+  }
+}
+/* =========================
+THE END
+========================= */
+/* =========================
+CARD EXIT
+========================= */
+@keyframes cardExit {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.85);
+  }
+}
+/* =========================
+LINE EXIT
+========================= */
+@keyframes lineExit {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+/* =========================
+DOT EXIT
+========================= */
+@keyframes dotExit {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+}
+/* =========================
+SYSTEM DOCK
+========================= */
+@keyframes heroDock {
+  from {
+    transform: translateX(0) translateY(0);
+  }
+  to {
+    transform: translateX(420px) translateY(-40px);
+  }
+}
+/* =========================
+SKIP BUTTON EXIT
+========================= */
+@keyframes skipFadeOut {
+  0% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+/* =========================
+UI REVEAL
+========================= */
+@keyframes uiReveal {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 body {

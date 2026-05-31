@@ -3,7 +3,7 @@
 .page__header {
     position: absolute;
     width: 100%;
-    display: none;
+    z-index: 6000;
 
     .wrapper {
         max-width: 1225px;
@@ -16,7 +16,7 @@
         gap: 60px;
 
         .logo { 
-            width: 200px;
+            width: 160px;
 
             a {
                 width: 100%;
@@ -36,17 +36,46 @@
             .links {
                 display: flex;
                 gap: 42px;
+                opacity: 0;
+                transform: translateY(12px);
+                pointer-events: none;
 
                 a {
+                    color: #0FA9F5;
+                    font-family: Saira;
                     font-size: 16px;
-                    font-weight: 500;
-                    transition: all linear .15s;
-                    color: #2E353B;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
 
                     &:hover {
                         cursor: pointer;
-                        color: #A259FF;
+                        color: #FFCE00;
                     }
+                }
+            }
+
+            .btn__header {
+                opacity: 0;
+                transform: translateY(12px);
+                border-radius: 30px;
+                border: 1px solid rgba(255, 206, 0, 0.15);
+                background: linear-gradient(94deg, rgba(16, 25, 195, 0.09) 2.06%, rgba(4, 223, 64, 0.03) 97.75%);
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                padding: 7px 16px 8px 10px;
+                color: #FFCE00;
+                font-family: Saira;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 122.111%; /* 19.538px */
+
+                &:hover {
+                    cursor: pointer;
+                    filter: brightness(1.2);
+                    color: #FFCE00;
                 }
             }
         }
