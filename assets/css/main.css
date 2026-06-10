@@ -791,10 +791,9 @@ nav {
   position: absolute;
   border-radius: 30px;
   padding: 15px 18px 15px 22px;
-  z-index: 3;
+  z-index: 3000;
   -webkit-font-smoothing: antialiased;
   backface-visibility: hidden;
-  transform: translateZ(0);
 }
 .page__hero .hero-system .flow-card .card-content {
   display: flex;
@@ -807,15 +806,14 @@ nav {
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
-  line-height: 122.111%;
-  /* 24.422px */
+  line-height: 1.2;
 }
 .page__hero .hero-system .flow-card .card-content .info p {
   font-family: Saira;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 122.111%;
+  line-height: 1.2;
 }
 .page__hero .hero-system .flow-card .card-content .info span {
   color: #B6C7EB;
@@ -823,8 +821,7 @@ nav {
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 122.111%;
-  /* 17.096px */
+  line-height: 1.2;
 }
 .page__hero .hero-system .flow-card.card-1 {
   top: 81px;
@@ -872,7 +869,7 @@ nav {
   font-family: Saira;
   font-size: 15px;
   font-weight: 400;
-  line-height: 122.111%;
+  line-height: 1.2;
 }
 .page__hero .hero-system .flow-card.card-2 .card-content .card-text {
   color: #B6C7EB;
@@ -880,7 +877,7 @@ nav {
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 122.111%;
+  line-height: 1.2;
 }
 .page__hero .hero-system .flow-card.card-3 {
   top: 21px;
@@ -926,8 +923,7 @@ nav {
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
-  line-height: 122.111%;
-  /* 18.317px */
+  line-height: 1.2;
 }
 .page__hero .hero-system .flow-card.card-4 .card-content .card-text {
   color: #B6C7EB;
@@ -935,7 +931,7 @@ nav {
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 122.111%;
+  line-height: 1.2;
 }
 .page__hero .hero-system .flow-card.card-5 {
   top: 276px;
@@ -997,8 +993,7 @@ nav {
   font-size: 15px;
   font-style: normal;
   font-weight: 400;
-  line-height: 122.111%;
-  /* 18.317px */
+  line-height: 1.2;
 }
 .page__hero .hero-system .flow-card.card-7 .card-content .card-text {
   color: #B6C7EB;
@@ -1006,7 +1001,7 @@ nav {
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
-  line-height: 122.111%;
+  line-height: 1.2;
 }
 .page__hero .hero-system .flow-card.card-8 {
   top: 487px;
@@ -1437,14 +1432,22 @@ DOT ENTER
 /* =========================
 CARD ENTER
 ========================= */
+/*@keyframes cardEnter {
+    from {
+        opacity: 0;
+        transform: translateY(10px) scale(.92);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}*/
 @keyframes cardEnter {
   from {
     opacity: 0;
-    transform: translateY(10px) scale(0.92);
   }
   to {
     opacity: 1;
-    transform: translateY(0) scale(1);
   }
 }
 /* =========================
