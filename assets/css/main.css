@@ -726,7 +726,7 @@ nav {
   left: 433.8px;
 }
 .page__hero .hero-system .hero-svg .dot.dot-green.dot-green-2 {
-  top: 331.8px;
+  top: 333.8px;
   left: 539.8px;
 }
 .page__hero .hero-system .hero-svg .dot.dot-green.dot-green-3 {
@@ -848,11 +848,11 @@ nav {
 }
 .page__hero .hero-system .flow-card.card-2 {
   top: 248px;
-  left: 225px;
+  left: 180px;
   display: flex;
   align-items: center;
   gap: 10px;
-  max-width: 140px;
+  max-width: 200px;
   overflow: visible;
   padding: 12px 16px;
   border-radius: 20px;
@@ -860,8 +860,8 @@ nav {
   background: linear-gradient(94deg, rgba(4, 223, 146, 0.08) 2.06%, rgba(4, 223, 64, 0.01) 97.75%);
 }
 .page__hero .hero-system .flow-card.card-2 .card-icon {
-  min-width: 27.535px;
-  height: 27.535px;
+  min-width: 34px;
+  height: 34px;
   flex-shrink: 0;
 }
 .page__hero .hero-system .flow-card.card-2 .card-content {
@@ -871,6 +871,14 @@ nav {
   color: #04DF40;
   font-family: Saira;
   font-size: 15px;
+  font-weight: 400;
+  line-height: 122.111%;
+}
+.page__hero .hero-system .flow-card.card-2 .card-content .card-text {
+  color: #B6C7EB;
+  font-family: "Source Sans 3";
+  font-size: 14px;
+  font-style: normal;
   font-weight: 400;
   line-height: 122.111%;
 }
@@ -899,7 +907,7 @@ nav {
   display: flex;
   align-items: center;
   gap: 10px;
-  max-width: 180px;
+  max-width: 210px;
   overflow: visible;
   padding: 12px 16px;
   height: auto;
@@ -908,8 +916,8 @@ nav {
   background: rgba(16, 25, 195, 0.09);
 }
 .page__hero .hero-system .flow-card.card-4 .card-icon {
-  width: 27.535px;
-  height: 27.535px;
+  width: 34px;
+  height: 34px;
   flex-shrink: 0;
 }
 .page__hero .hero-system .flow-card.card-4 .card-content h3 {
@@ -920,6 +928,14 @@ nav {
   font-weight: 400;
   line-height: 122.111%;
   /* 18.317px */
+}
+.page__hero .hero-system .flow-card.card-4 .card-content .card-text {
+  color: #B6C7EB;
+  font-family: "Source Sans 3";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 122.111%;
 }
 .page__hero .hero-system .flow-card.card-5 {
   top: 276px;
@@ -964,7 +980,7 @@ nav {
   left: 501px;
   gap: 10px;
   align-items: center;
-  max-width: 160px;
+  max-width: 210px;
   padding: 12px 16px;
   height: auto;
   border-radius: 20px;
@@ -972,12 +988,10 @@ nav {
   background: rgba(16, 25, 195, 0.09);
 }
 .page__hero .hero-system .flow-card.card-7 .card-icon {
-  width: 27.535px;
-  height: 27.535px;
+  width: 34px;
+  height: 34px;
 }
 .page__hero .hero-system .flow-card.card-7 .card-content h3 {
-  display: none;
-  transition: all 0.3s ease;
   color: #3BA0FF;
   font-family: Saira;
   font-size: 15px;
@@ -986,8 +1000,13 @@ nav {
   line-height: 122.111%;
   /* 18.317px */
 }
-.page__hero .hero-system .flow-card.card-7 .card-content h3.active {
-  display: block;
+.page__hero .hero-system .flow-card.card-7 .card-content .card-text {
+  color: #B6C7EB;
+  font-family: "Source Sans 3";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 122.111%;
 }
 .page__hero .hero-system .flow-card.card-8 {
   top: 487px;
@@ -1012,13 +1031,37 @@ nav {
 .page__hero .hero-content {
   position: absolute;
   max-width: 639px;
-  top: 245px;
+  top: 215px;
   padding-bottom: 246px;
   left: 8%;
   opacity: 0;
   transform: translateY(12px);
   pointer-events: none;
   z-index: 5000;
+}
+.page__hero .hero-content .tag {
+  border-radius: 4px;
+  border: 1px solid rgba(255, 206, 0, 0.83);
+  background: rgba(255, 206, 0, 0.06);
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  gap: 8px;
+  padding: 4px 8px;
+  color: #FFCE00;
+  font-family: Saira;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 110%;
+  /* 15.4px */
+  letter-spacing: 1.26px;
+}
+.page__hero .hero-content .tag .icon {
+  width: 20.5px;
+  flex-shrink: 0;
+  flex-grow: 0;
 }
 .page__hero .hero-content .hero-title {
   color: #04DF40;
@@ -1459,7 +1502,7 @@ PILL EXPAND
     gap: 0;
   }
   to {
-    width: 140px;
+    width: 200px;
     gap: 10px;
   }
 }
@@ -1469,7 +1512,7 @@ PILL EXPAND
     gap: 0;
   }
   to {
-    width: 180px;
+    width: 210px;
     gap: 10px;
   }
 }
