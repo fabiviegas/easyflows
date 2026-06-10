@@ -972,7 +972,7 @@ nav {
   color: #FFCE00;
 }
 .page__hero .hero-system .flow-card.card-7 {
-  top: 621px;
+  top: 590px;
   left: 501px;
   gap: 10px;
   align-items: center;
@@ -1035,7 +1035,7 @@ nav {
   z-index: 5000;
 }
 .page__hero .hero-content .tag {
-  border-radius: 4px;
+  border-radius: 8px;
   border: 1px solid rgba(255, 206, 0, 0.83);
   background: rgba(255, 206, 0, 0.06);
   margin-bottom: 8px;
